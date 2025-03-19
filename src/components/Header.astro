@@ -17,11 +17,6 @@ const navItems = [
     label: "sobre-mi",
     url: "/#sobre-mi",
   },
-  {
-    title: "Contacto",
-    label: "contacto",
-    url: "https://www.linkedin.com/in/manuelpinzon/",
-  },
 ]
 ---
 
@@ -41,8 +36,18 @@ const navItems = [
           {link.title}
         </a>
       ))
+      
     }
+     <a
+          class="relative block px-2 py-2 transition hover:text-blue-500 dark:hover:text-blue-500"
+          aria-label={"Contacto"}
+          href={"https://www.linkedin.com/in/manuelpinzon/"}
+          target="_blank"
+        >
+          {"Contacto"}
+        </a>
     <ThemeToggle />
+    
   </nav>
 </header>
 
