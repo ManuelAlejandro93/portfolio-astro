@@ -27,14 +27,14 @@ const { title, company, description, link, date } = Astro.props
     </div>
   </div>
   <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-    {description}
-    {
-      link && (
+    {description}      
         <LinkInline href={link}>
-          View company{" "}
+          Achieved goals{" "}
+        </LinkInline>
+        <div class="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
+            class="w-5 icon icon-tabler icon-tabler-chevron-right text-yellow-300"
             width="24"
             height="24"
             viewBox="0 0 24 24"
@@ -49,8 +49,9 @@ const { title, company, description, link, date } = Astro.props
               <path d="M9 6l6 6l-6 6" />
             </>
           </svg>
-        </LinkInline>
-      )
-    }
-  </div>
+          <span>oee</span>
+        <div/>
+
+      
+      </div>
 </div>
