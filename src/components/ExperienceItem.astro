@@ -1,15 +1,18 @@
 ---
 import LinkInline from "./LinkInline.astro"
 
+import ExperienceGoal from "./ExperienceGoal.astro"
+
 interface Props {
   title: string
   company: string
   description: string
   link?: string
   date: string
+  experienceGoals?:string[]
 }
 
-const { title, company, description, link, date } = Astro.props
+const { title, company, description, link, date,experienceGoals } = Astro.props
 ---
 
 <div
@@ -28,30 +31,15 @@ const { title, company, description, link, date } = Astro.props
   </div>
   <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
     {description}      
-        <LinkInline href={link}>
+        <LinkInline>
           Achieved goals{" "}
-        </LinkInline>
-        <div class="flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right text-yellow-300"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </>
-          </svg>
-          <span>oee</span>
+        </LinkInline>{
+          experienceGoals!.map( goal => 
+          <ExperienceGoal singleGoal={goal ?? "goal"}/>
+          )
+        }
         <div/>
-
+        
       
       </div>
 </div>
