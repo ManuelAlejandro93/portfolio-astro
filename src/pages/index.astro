@@ -17,27 +17,29 @@ import TitleSection from "@/components/TitleSection.astro"
   description="Hire Manuel Fronted Developer"
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
-    </SectionContainer>
-    <div class="space-y-24">
-    <SectionContainer id="experiencia">
+
+  <SectionContainer class="py-16 md:pt-24">
+    <Hero />
+  </SectionContainer>
+
+    <SectionContainer id="experiencia" class="py-16 md:pt-12">
       <TitleSection>
-        <Briefcase class="size-8" />
+        <Briefcase class="size-12" />
         Work Experience
       </TitleSection>
       <Experience />
     </SectionContainer>
-
-    <SectionContainer id="proyectos">
+    
+    <SectionContainer id="proyectos" class="py-16 md:pt-20">
       <TitleSection>
         <CodeIcon class="size-7" />
-        Proyectos
+        Last Projects
       </TitleSection>
       <Projects />
     </SectionContainer>
+
+
+
 
     <!-- <SectionContainer id="sobre-mi"> -->
       <!-- <TitleSection> -->
