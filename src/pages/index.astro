@@ -10,6 +10,7 @@ import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
 import TitleSection from "@/components/TitleSection.astro"
+import CurrentProject from "@/components/CurrentProjects.astro"
 //
 ---
 
@@ -34,12 +35,18 @@ import TitleSection from "@/components/TitleSection.astro"
     <SectionContainer id="proyectos" class="py-16 md:pt-20">
       <TitleSection>
         <CodeIcon class="size-7" />
+        Current Projects
+      </TitleSection>
+      <CurrentProject />
+    </SectionContainer>
+
+  <!-- <SectionContainer id="proyectos" class="py-16 md:pt-20">
+      <TitleSection>
+        <CodeIcon class="size-7" />
         Last Projects
       </TitleSection>
       <Projects />
-    </SectionContainer>
-
-
+    </SectionContainer> -->
 
 
     <!-- <SectionContainer id="sobre-mi"> -->
